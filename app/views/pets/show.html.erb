@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+      <h1>Pet details</h1>
+      <h2>Name: <%= @pet.name %></h2>
+      <p>Category: <%= @pet.category %></p>
+      <p>Address: <%= @pet.address %></p>
+      <p>Date: <%= @pet.found_date %></p>
+      <%= link_to 'Edit', edit_pet_path(@pet) %>
+      <%= link_to 'Back', pets_path %>
+      <%= link_to 'Delete', pet_path(@pet),
+      method: :delete,
+      data: {confirm: "are you sure?"} %>
+    </div>
+  </div>
+</div>
